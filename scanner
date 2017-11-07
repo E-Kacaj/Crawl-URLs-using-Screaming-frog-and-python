@@ -1,0 +1,32 @@
+import subprocess
+import time
+
+# Enter your relevant location
+
+frog = r'C:\Program Files (x86)\Screaming Frog SEO Spider\ScreamingFrogSEOSpider.exe'
+
+#Enter your urls as a list with '--crawl'
+lst2 = [
+        '--crawl https://www.washingtonpost.com/',
+        '--crawl https://www.nytimes.com/',
+        ]
+
+"""
+Start timer for delayed action
+"""
+top = 32400
+print "Starting sodastream scan with Screaming frog"
+for i in xrange(0, top):
+    print top - i
+    time.sleep(1)
+
+
+"Scanner"
+
+print "Beginning Scanning, Please do not disturb"
+for site in lst2:
+    val = frog + " " + site
+    subprocess.Popen(val)
+    time.sleep(200)
+
+print "Scanning is Complete"
