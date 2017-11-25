@@ -27,6 +27,7 @@ print "Beginning Scanning, Please do not disturb"
 for site in lst2:
     val = frog + " " + site
     subprocess.Popen(val)
+    #rest between one process and the next
     time.sleep(200)
 
 print "Scanning is Complete"
